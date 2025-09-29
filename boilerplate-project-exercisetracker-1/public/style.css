@@ -1,0 +1,137 @@
+/* Universal box-sizing for consistent layout */
+* {
+  box-sizing: border-box;
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default paddings */
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Use Roboto as specified in HTML, fallback to sans-serif */
+  margin: 0; /* Remove default body margin */
+  background-color: #FFDBDB; /* Light Pink background from palette */
+  color: #222; /* Keep a dark grey for general text for good contrast */
+  line-height: 1.6; /* Improve readability of text */
+}
+
+.container {
+  max-width: 900px; /* Limit content width for better readability */
+  margin: 50px auto; /* Center the container with top/bottom margin */
+  padding: 30px;
+  background-color: #ffffff; /* White background for the main content area */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+  font-size: 2.5em; /* Larger heading for prominence */
+  font-weight: 700; /* Bolder */
+  color: #594100; /* Darker Brown for primary heading */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #644A07; /* Dark Brown for section headings */
+  margin-bottom: 20px;
+  border-bottom: 2px solid #FFC6C6; /* Pink underline for separation */
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #333; /* Slightly softer dark grey for paragraphs */
+}
+
+form {
+  margin-bottom: 30px;
+  padding: 25px;
+  background-color: #fcf1f1; /* A very light pink/off-white for form backgrounds */
+  border: 1px solid #FFC6C6; /* Pink border */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Softer shadow for forms */
+  width: 100%; /* Forms take full width of their container */
+}
+
+input[type="text"] {
+  display: block;
+  margin-bottom: 15px;
+  padding: 12px 15px; /* More padding for better input feel */
+  width: 100%;
+  border: 1px solid #FFC6C6; /* Pink border for inputs */
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+    color: #a0a0a0; /* Lighter placeholder text */
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #644A07; /* Dark Brown border on focus */
+  box-shadow: 0 0 0 3px rgba(100, 74, 7, 0.2); /* Subtle glow on focus */
+}
+
+input[type="submit"] {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #644A07; /* Dark Brown for submit button */
+  color: #ffffff; /* White text on dark button */
+  border: none; /* No border for a cleaner look */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  display: block; /* Ensure button takes full width if desired, or inline-block for fitting content */
+  width: auto; /* Allow button to size to its content */
+  margin-top: 20px; /* Space above button */
+}
+
+input[type="submit"]:hover {
+  background-color: #594100; /* Even Darker Brown on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+input[type="submit"]:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+code {
+  font-family: 'Fira Code', 'monospace'; /* Modern monospace font if available, else generic */
+  font-size: 0.95em; /* Slightly smaller for code */
+  background-color: #FFC6C6; /* Pink for code blocks */
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #594100; /* Darker brown for code text */
+}
+
+/* Specific styling for the GET log instructions */
+.container > p { /* Target direct child p tags of container for GET instructions */
+    background-color: #fcf1f1;
+    border: 1px solid #FFC6C6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+/* Small adjustments for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
